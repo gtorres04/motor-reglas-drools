@@ -4,6 +4,7 @@ import com.dosideas.drools.ejemplo1.rrhh.Empleado;
 import java.math.BigDecimal;
  
 rule "Programador"
+salience 25
     when
         empleado : Empleado(promedioConocimientos >= 8, promedioConocimientos <= 10)
     then
@@ -13,6 +14,7 @@ rule "Programador"
 end
  
 rule "Lider de Proyecto"
+salience 20
     when
         empleado : Empleado(promedioConocimientos >= 4, promedioConocimientos <= 7)
     then
@@ -22,6 +24,7 @@ rule "Lider de Proyecto"
 end 
  
 rule "Gerente"
+salience 2
     when
         empleado : Empleado(promedioConocimientos >= 0, promedioConocimientos <= 3)
     then
